@@ -690,9 +690,20 @@ img.brand {
 }
 
 .nav-logo{
-  position: absolute;
+    position: absolute;
     bottom: 30%;
     left: 19%;
+    
+    border-radius: 50%;
+    background-color: #211e1d;
+}
+
+@media (max-width:500px) {
+  .nav-logo{
+    bottom: -64px;
+    left: 15%;
+    padding: 4px;
+  }
 }
 
 .nav-logo .logo{
