@@ -4519,20 +4519,25 @@ opacity: 1;
 .portfolio-control .glide__arrow i {
   padding: 10px 0 10px 0;
   font-size: 30px;
-  color: #ccc;
+  color: #BA9F52;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.portfolio-control .glide__arrow i::before{
+  background-color: #000;
 }
 
 .portfolio-control .glide__arrow .border-circle {
   display: block;
   position: absolute;
+  background-color: transparent;
   top: 10px;
   right: -15px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid #BA9F52;
   border-left-color: transparent;
   border-top-color: transparent;
   -webkit-transform: rotate(-45deg);
@@ -4545,14 +4550,15 @@ opacity: 1;
   position: absolute;
   left: 0;
   bottom: -15px;
+  background-color: #000;
 }
 
 .portfolio-control .glide__arrow.glide__arrow--left:hover i {
-  color: #BA9F52;
+  color: #ccc;
 }
 
 .portfolio-control .glide__arrow.glide__arrow--left:hover .border-circle {
-  border-color: #BA9F52;
+  border-color: #ccc;
   border-left-color: transparent;
   -webkit-transform: rotate(0);
   transform: rotate(0);
@@ -4567,18 +4573,18 @@ opacity: 1;
 .portfolio-control .glide__arrow.glide__arrow--right .border-circle {
   right: inherit;
   left: -15px;
-  border-left-color: #ccc;
+  border-left-color: #BA9F52;
   border-right-color: transparent;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .portfolio-control .glide__arrow.glide__arrow--right:hover i {
-  color: #BA9F52;
+  color: #ccc;
 }
 
 .portfolio-control .glide__arrow.glide__arrow--right:hover .border-circle {
-  border-color: #BA9F52;
+  border-color: #ccc;
   border-right-color: transparent;
   -webkit-transform: rotate(0);
   transform: rotate(0);
@@ -4681,12 +4687,12 @@ opacity: 1;
 .container.full-control .home-slider-controls .glide__arrow,
 .container.full-control .clients-slider-controls .glide__arrow {
   font-size: 11px;
-  padding: 16px;
-  background-color: #111;
-  color: #fff;
+  padding: 12px;
+  background-color: transparent;
+  color: #BA9F52;
   position: absolute;
   bottom: 60px;
-  border: none;
+  border: 1px solid #BA9F52;
   border-radius: 50%;
   cursor: pointer;
   -webkit-transition: all ease 0.3s;
@@ -4694,7 +4700,8 @@ opacity: 1;
 }
 
 .container.full-control .home-slider-controls .glide__arrow:hover {
-  color: #BA9F52;
+  background-color: #BA9F52;
+  color: #fff;
 }
 
 .container.full-control .home-slider-controls .glide__arrow.glide__arrow--left {
