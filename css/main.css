@@ -701,8 +701,8 @@ img.brand {
 @media (max-width:500px) {
   .nav-logo{
     bottom: -64px;
-    left: 15%;
-    padding: 4px;
+    left: 10%;
+    padding: 5px;
   }
 }
 
