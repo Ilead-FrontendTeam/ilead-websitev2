@@ -722,8 +722,8 @@ img.brand {
   color: #BA9F52;
 }
 
-.nav-logo-dropdown,
-.nav-logo-dropdown-responsive{
+.parent .nav-logo-dropdown,
+.parent .nav-logo-dropdown-responsive{
   /* max-height: 380px; */
   overflow-y: scroll;
   position: fixed;
@@ -738,6 +738,10 @@ img.brand {
   white-space: nowrap;
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.5s;
+}
+
+.parent.action .nav-logo-dropdown{
+  display: none;
 }
 
 .nav-logo-dropdown-responsive{
