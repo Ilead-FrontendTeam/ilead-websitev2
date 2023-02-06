@@ -392,7 +392,7 @@ a {
   /* display: block; */
   /* text-align: center; */
   /* padding: 0 25%; */
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   font-family: 'Open Sans';
   text-transform: capitalize;
@@ -688,44 +688,90 @@ img.brand {
   flex-direction: column;
   /* flex-wrap: wrap; */
 }
-
 .nav-logo{
-    position: absolute;
-    bottom: 30%;
-    left: 19%;
-    
-    border-radius: 50%;
-    background-color: #211e1d;
-}
-
-@media (max-width:500px) {
-  .nav-logo{
-    bottom: -64px;
-    left: 10%;
-    padding: 5px;
-  }
-}
-
-.nav-logo .logo{
-  width: 40px;
+  position: absolute;
+  z-index: 99;
+  top: 13%;
+  right: 0;
+  /* background-color: #BA9F52; */
+  /* background-color: #fff; */
+  padding: 8px 10px;
+  border-radius:50% 0 0 50%;
+  /* width: 50px;
+  height: 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #1b1b1b; */
+  background-color: #fff;
+  /* border: 2px solid #BA9F52; */
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  box-shadow: 0 0 2px 2px #BA9F52;
   cursor: pointer;
 }
 
-.nav-logo .nav-dropdown{
-  overflow-x: hidden;
-  top:-100%;
-  height: 250px;
+@media (min-width:551px) {
+  .nav-logo{
+    display:none;
+  }
 }
 
-.nav-logo .nav-dropdown img{
-  width:35px
+.nav-logo svg{
+  font-size: 18px;
+  color: #BA9F52;
 }
 
-.nav-logo .nav-dropdown a{
-  position: relative;
+.nav-logo-dropdown,
+.nav-logo-dropdown-responsive{
+  /* max-height: 380px; */
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  top: 20%;
+  padding: 10px;
+  background-color: #1d1d1d;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  white-space: nowrap;
+  z-index: 9;
+  white-space: nowrap;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.5s;
 }
 
-.nav-logo .nav-dropdown a::before {
+.nav-logo-dropdown-responsive{
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+
+.nav-logo-dropdown li a img{
+  width:40px
+}
+
+.nav-logo-dropdown-responsive.active{
+  -webkit-transform: translateX(0);
+  transform: translateX(0) !important;
+}
+
+
+@media (max-width:550px) {
+  .nav-logo-dropdown{
+      display: none;
+  }
+  .nav-logo-dropdown-responsive li {
+    margin: 15px 0;
+  }
+
+  .nav-logo-dropdown-responsive li a img{
+    width:100px
+  }
+}
+
+ 
+
+/* .nav-logo .nav-dropdown a::before {
   content: '';
   display: block;
   position: absolute;
@@ -737,20 +783,18 @@ img.brand {
   border: solid transparent 5px;
   border-bottom-color: #fff;
   transition: opacity 250ms, top 250ms;
-}
-.nav-logo .nav-dropdown a:hover::before{
+} */
+/* .nav-logo .nav-dropdown a:hover::before{
 opacity: 1;
-} 
+}  */
 
-.nav-logo .nav-dropdown a::after {
+/* .nav-logo .nav-dropdown a::after {
   content: attr(data-info);
-  /* content: "iLead"; */
   display: inline;
   position: absolute;
   top: 20px;
   left: -25px;
   opacity: 0;
-  /* width: 190px; */
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5em;
@@ -765,7 +809,7 @@ opacity: 1;
 
 .nav-logo .nav-dropdown a:hover::after{
 opacity: 1;
-} 
+}  */
 
 .nav-switch .switch-content {
   width: 30px;
@@ -958,8 +1002,8 @@ opacity: 1;
   transition: all ease 0.3s;
 }
 
-.nav-body .nav-dropdown li:hover a ,
-.nav-logo .nav-dropdown li:hover a{
+.nav-body   li:hover a ,
+.nav-logo   li:hover a{
   color: #fff;
 }
 
@@ -1136,7 +1180,7 @@ opacity: 1;
 
 @media(max-width:575px){
   .text-content .title-home {
-    font-size: 45px !important;
+    font-size: 40px !important;
     line-height:50px !important;
   }
 }
@@ -4128,7 +4172,7 @@ opacity: 1;
 }
 
 .widget-block.contact-form {
-  padding: 30px;
+  padding: 40px;
   text-align: center;
 }
 
@@ -4156,12 +4200,12 @@ opacity: 1;
   width: 100%;
   height: 20px;
   padding: 25px 0 10px 0;
-  text-align: center;
+  /* text-align: center; */
   color: #fff;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #464646;
-  font-size: 20px;
+  font-size: 18px;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
   -webkit-box-sizing: content-box;
@@ -4888,7 +4932,7 @@ opacity: 1;
 }
 
 span.slogon{
-  font-size: 16px;
+  font-size: 14px;
   display: block;
   text-transform: uppercase;
   font-weight:100 !important;
