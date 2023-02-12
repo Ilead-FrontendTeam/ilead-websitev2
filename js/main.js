@@ -18,9 +18,13 @@ for (i = 0; i < bg_image.length; ++i) {
   var parent = document.querySelector(".parent");
   var basic = document.querySelector(".basic-section");
   var logo = document.getElementById("nav-logo");
-  var navLogo = document.querySelector(".nav-logo");
-  var companies = document.querySelector(".nav-logo-dropdown-responsive");
+  // var navLogo = document.querySelector(".my-nav");
+  // var companies = document.querySelector(".my-nav-dropdown-responsive");
 
+  // navLogo.addEventListener("click", function () {
+  //   companies.classList.toggle("active");
+  //   navLogo.classList.toggle("active");
+  // });
   toggle.addEventListener("click", function () {
     parent.classList.toggle("action");
     logo.classList.toggle("column");
@@ -28,11 +32,6 @@ for (i = 0; i < bg_image.length; ++i) {
   basic.addEventListener("click", function () {
     parent.classList.remove("action");
     logo.classList.remove("column");
-  });
-
-  navLogo.addEventListener("click", function () {
-    companies.classList.toggle("active");
-    navLogo.classList.toggle("active");
   });
 })();
 
@@ -104,3 +103,13 @@ lightboxVideo.on("slide_changed", ({ prev, current }) => {
 var lightboxInlineIframe = GLightbox({
   selector: ".glightbox4",
 });
+
+(function () {
+  var navLogo = document.querySelector(".nav-logo");
+  var companies = document.querySelector(".nav-logo-dropdown-responsive");
+
+  navLogo.addEventListener("click", function () {
+    companies.classList.toggle("active");
+    navLogo.classList.toggle("active");
+  });
+})();

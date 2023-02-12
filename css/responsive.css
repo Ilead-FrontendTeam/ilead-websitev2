@@ -305,7 +305,7 @@
 
     .nav-switch {
         height: auto;
-        top: 6%;
+        top: 50%;
         transform: translateY(-50%);
         background-color: transparent;
         border-left: none;

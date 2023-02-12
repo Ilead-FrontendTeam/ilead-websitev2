@@ -104,7 +104,6 @@ html ::-webkit-scrollbar-thumb {
 body {
   background-color: #000;
   line-height: 1;
-  overflow-x: hidden;
 }
 
 * {
@@ -423,6 +422,7 @@ a {
   width: 100%;
   object-fit: cover;
 }
+
 
 .w-title.small {
   font-size: 14px;
@@ -4807,8 +4807,7 @@ span.slogon{
 
 
 
-
-
+ 
 
 
 
